@@ -76,13 +76,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 		    <div class="container" style="margin-top:40px">
 		<div class="row">
-		<?php echo validation_errors(); ?>
-        <?php echo form_open('index.php/verifylogin'); ?>
+		
 			<div class="col-sm-6 col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<strong> Sign in to continue</strong>
 					</div>
+					<div align="center" style="color:red;"><?php echo validation_errors(); ?>
+                    <?php echo form_open('verifylogin'); ?></div>
 					<div class="panel-body">
 						<form role="form" action="#" method="POST">
 							<fieldset>
