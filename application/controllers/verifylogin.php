@@ -29,7 +29,7 @@ class Verifylogin extends CI_Controller {
 			else
 			{
 			//Go to private area
-			 redirect('dashboard', 'refresh');
+			// redirect('dashboard', 'refresh');
 			  //$this->load->view('manager/dashboard');
 			}
 					
@@ -55,6 +55,7 @@ class Verifylogin extends CI_Controller {
 				'username' => $row->username
 				);
 				$this->session->set_userdata('logged_in', $sess_array);
+				redirect('dashboard');
 			}
 		return TRUE;
 			}
@@ -64,5 +65,20 @@ class Verifylogin extends CI_Controller {
 				return false;
 			}
 		}
+	
+	
+	 public function logout()
+
+    {
+
+                     $session = array(
+                     'id' => '-1',
+                     'username' => ''
+                     );
+               $this->session->set_userdata('logged_in', FALSE);
+               $this->session->sess_destroy(); 
+               $this->index();
+
+    }
 	
 }

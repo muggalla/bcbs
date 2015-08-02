@@ -224,7 +224,7 @@ $config['log_threshold'] = 0;
 |
 */
 $config['log_path'] = '';
-
+$config['sess_encrypt_cookie']    = TRUE;
 /*
 |--------------------------------------------------------------------------
 | Log File Extension

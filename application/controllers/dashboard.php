@@ -7,13 +7,16 @@ class Dashboard extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
+		
 	}
 	
 	public function index()
 	{
+		
 		$this->load->helper('url');
 		$this->load->helper(array('form', 'url'));
 		$this->load->view('manager/dashboard');
+		
 	}
 	
 	
