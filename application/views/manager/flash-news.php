@@ -60,26 +60,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 <div><img  src="<?php echo base_url('assets/images/manager_logo.png');?>" alt=""></div>
 <div align="right">Welcome <strong>User</strong> | <a href="<?php echo base_url('verifylogin/logout');?>">Logout</a></div>
-<div id="container" align="center">
+<div id="container">
        <div class="row">
-	    <div class="col-md-12">
-            <h1>Dash Board</h1>
-			 <div class="row"  style="padding:25px;">
-			   <div class="col-md-2" id="dash_window"><a href="">Basic Particulars</a></div>
-			   <div class="col-md-2" id="dash_window"><a href="">Remittances</a></div>
-			   <div class="col-md-2" id="dash_window"><a href="">Schemes</a></div>
-			   <div class="col-md-2" id="dash_window"><a href="">Remittances</a></div>
-			   <div class="col-md-2" id="dash_window"><a href="">Schemes</a></div>
-			 </div>
-			 <div class="row"  style="padding:25px; padding-top:0px;">
-			   <div class="col-md-2" id="dash_window"><a href="<?php echo base_url('manager/flashnews')?>">Flash News</a></div>
-			   <div class="col-md-2" id="dash_window"><a href="">Remittances</a></div>
-			   <div class="col-md-2" id="dash_window"><a href="">Schemes</a></div>
-			   <div class="col-md-2" id="dash_window"><a href="">Remittances</a></div>
-			   <div class="col-md-2" id="dash_window"><a href="">Schemes</a></div>
-			 </div>
-			
+	   <h1>Flash News</h1>
+	    <div class="col-md-2">
+           asdfasdf  
         </div>
+		<div class="col-md-10">
+             <form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="ftitle" class="col-sm-3 control-label">Title</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="ftitle" placeholder="News Title">
+      <p class="help-block">We can give title for easyness to pic particular news line</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="fdesc" class="col-sm-3 control-label">Description</label>
+    <div class="col-sm-9">
+      <textarea class="form-control" id="inputPassword3" placeholder="News Description"></textarea>
+      <p class="help-block">This is the description of the news</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Status</label>
+    <div class="col-sm-9">
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Active" checked>
+          Active
+        </label>
+		 <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="Inactive">
+          Inactive
+        </label>
+      </div>
+      <p class="help-block">Status of the News Article</p>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-default">Create News</button>
+</form>
+        </div>
+		
 	   </div>
 </div>
 

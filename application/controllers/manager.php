@@ -16,6 +16,9 @@ class Manager extends CI_Controller {
 		$this->load->view('manager/home');
 	}
 	
+	public function flashnews(){
+	    $this ->load->view('manager/flash-news');
 	
+	}
 	
 }
