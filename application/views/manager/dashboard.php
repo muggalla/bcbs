@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	::-moz-selection { background-color: #E13300; color: white; }
 
 	body {
-		background-color: #fff;
+		background-color:#fff;
 		margin: 40px;
 		font: 13px/20px normal Helvetica, Arial, sans-serif;
 		color: #4F5155;
@@ -42,16 +42,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		padding: 14px 15px 10px 15px;
 	}
 
+    #dash_window{
+	padding:10px;
+	box-shadow: 0 0 8px #D0D0D0;
+	border: 1px solid #D0D0D0;
+	box-shadow: 0 0 8px #D0D0D0;
+	margin:5px;
+	}
+	
+	#dash_window a:hover{
+	color:#FF6600;
+	text-decoration:none;
+	}
 	
 	</style>
 </head>
 <body>
 <div><img  src="<?php echo base_url('assets/images/manager_logo.png');?>" alt=""></div>
 <div align="right">Welcome <strong>User</strong> | <a href="<?php echo base_url('verifylogin/logout');?>">Logout</a></div>
-<div id="container">
+<div id="container" align="center">
        <div class="row">
 	    <div class="col-md-12">
             <h1>Dash Board</h1>
+			 <div class="row"  style="padding:25px;">
+			   <div class="col-md-2" id="dash_window"><a href="">Basic Particulars</a></div>
+			   <div class="col-md-2" id="dash_window"><a href="">Remittances</a></div>
+			   <div class="col-md-2" id="dash_window"><a href="">Schemes</a></div>
+			   <div class="col-md-2" id="dash_window"><a href="">Remittances</a></div>
+			   <div class="col-md-2" id="dash_window"><a href="">Schemes</a></div>
+			 </div>
+			 <div class="row"  style="padding:25px; padding-top:0px;">
+			   <div class="col-md-2" id="dash_window"><a href="">Basic Particulars</a></div>
+			   <div class="col-md-2" id="dash_window"><a href="">Remittances</a></div>
+			   <div class="col-md-2" id="dash_window"><a href="">Schemes</a></div>
+			   <div class="col-md-2" id="dash_window"><a href="">Remittances</a></div>
+			   <div class="col-md-2" id="dash_window"><a href="">Schemes</a></div>
+			 </div>
+			
         </div>
 	   </div>
 </div>
