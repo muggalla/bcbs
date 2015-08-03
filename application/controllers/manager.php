@@ -7,6 +7,7 @@ class Manager extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
+		date_default_timezone_set('Asia/Kolkata');
 	}
 	
 	public function index()
@@ -17,7 +18,9 @@ class Manager extends CI_Controller {
 	}
 	
 	public function flashnews(){
+	    $this ->load->view('manager/templates/menu');
 	    $this ->load->view('manager/flash-news');
+		$this->load->view('manager/templates/footer');
 	
 	}
 	
