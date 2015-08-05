@@ -18,9 +18,28 @@ class Manager extends CI_Controller {
 	}
 	
 	public function flashnews(){
-	    $this ->load->view('manager/templates/menu');
-	    $this ->load->view('manager/flash-news');
-		$this->load->view('manager/templates/footer');
+	
+	$this->load->helper('form');
+    $this->load->library('form_validation');
+
+    $data['title'] = 'Create a news item';
+
+    $this->form_validation->set_rules('ftitle', 'Title', 'required');
+    $this->form_validation->set_rules('fdesc', 'Description', 'required');
+
+    if ($this->form_validation->run() === FALSE)
+		{
+		
+			$this ->load->view('manager/templates/menu');
+			$this ->load->view('manager/flash-news');
+			$this->load->view('manager/templates/footer');
+		
+		}
+		 else
+		{
+			$this->User->set_news();
+			$this->load->view('news/success');
+		}
 	
 	}
 	

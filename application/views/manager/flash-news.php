@@ -1,8 +1,10 @@
+<?php echo validation_errors(); ?>
+<?php echo form_open('manager/flashnews') ?>
 <div id="container">
        <div class="row">
 	   <h1>Flash News</h1>
 		<div class="col-md-12">
-             <form class="form-horizontal" role="form">
+           
   <div class="form-group">
     <label for="ftitle" class="col-sm-3 control-label">Title</label>
     <div class="col-sm-9">
@@ -38,8 +40,7 @@
 	
   </div>
 
-  
-</form>
+
         </div>
 		
 	   </div>
